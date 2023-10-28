@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import Mainsection from "./components/Mainsection/Mainsection";
 import Navbar from "./components/Navbar/Navbar";
 

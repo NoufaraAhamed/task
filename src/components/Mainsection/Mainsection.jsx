@@ -16,7 +16,13 @@ function Mainsection(props) {
 
     setTimeout(() => {
       setShowMessage(false);
-    }, 3000);
+    }, 2000);
+  };
+
+  const receiveData = (data) => {
+    if (data === true) {
+      handleButtonClick();
+    }
   };
 
   return (
@@ -111,7 +117,7 @@ function Mainsection(props) {
             </button>
           </div>
         </div>
-        <Table items={items} />
+        <Table items={items} sendStatus={receiveData} />
       </div>
     </div>
   );

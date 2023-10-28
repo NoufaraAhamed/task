@@ -4,6 +4,11 @@ import "./Table.css";
 function Table(props) {
   const { items } = props;
 
+  const sendStatus = ()=>{
+    const data=true;
+    props.sendStatus(data)
+  }
+
   return (
     <table className="table ">
       <thead className="table-light">
@@ -42,8 +47,8 @@ function Table(props) {
               <td className="head">{item.sellingRate}</td>
               <td className="head">{item.stock}</td>
               <td>
-                <button className="btn btn-primary">Edit</button>
-                <button className="btn btn-danger ms-3">Delete</button>
+                <button className="btn btn-primary" onClick={sendStatus}>Edit</button>
+                <button className="btn btn-danger ms-3" onClick={sendStatus}>Delete</button>
               </td>
             </tr>
           ))}
