@@ -41,10 +41,10 @@ function Table(props) {
           items.map((item) => (
             <tr key={item.itemId}>
               <td className="ps-5 head">{item.itemName}</td>
-              <td className="head">{item.itemCode}</td>
-              <td className="head">{item.categoryName}</td>
+              <td className="head">{item.itemCode ? item.itemCode : '--'}</td>
+              <td className="head">{item.categoryName ? item.categoryName : '--'}</td>
               <td className="head">{item.landingCost}</td>
-              <td className="head">{item.sellingRate}</td>
+              <td className="head">{item.sellingRate ? item.sellingRate : '--'}</td>
               <td className="head">{item.stock}</td>
               <td>
                 <button className="btn btn-primary" onClick={sendStatus}>Edit</button>
