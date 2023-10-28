@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import icon_menu from "../Assets/icons-menu.png";
+import icon_menu from "../Assets/icon.png";
 import icon_user from "../Assets/icons-user.png";
 
 function Navbar() {
@@ -11,10 +11,10 @@ function Navbar() {
       </div>
       <div className="navbar-right">
         <div className="dropdowns">
-          <div class="dropdown">
+          <div className="dropdown">
             <label htmlFor="">company</label>
             <button
-              class="btn  dropdown-toggle"
+              className="btn  dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
@@ -23,10 +23,10 @@ function Navbar() {
               Am Entertainment
             </button>
           </div>
-          <div class="dropdown">
-          <label htmlFor="">Branch</label>
+          <div className="dropdown">
+            <label htmlFor="">Branch</label>
             <button
-              class="btn  dropdown-toggle"
+              className="btn  dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
@@ -35,10 +35,10 @@ function Navbar() {
               INSTORE BRANCH
             </button>
           </div>
-          <div class="dropdown">
-          <label htmlFor="">language</label>
+          <div className="dropdown">
+            <label htmlFor="">language</label>
             <button
-              class="btn  dropdown-toggle"
+              className="btn  dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"

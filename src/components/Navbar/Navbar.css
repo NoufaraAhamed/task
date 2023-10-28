@@ -1,56 +1,56 @@
-.navbar{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(211, 212, 220);
-    box-shadow: 0 1px 3px 10px rgb(0, 0, 0);
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(211, 212, 220);
+  border-bottom: #403b3b;
+  box-shadow: 0 0 20px 0 rgb(0, 0, 0);
 }
-.navbar-left{
-    margin-left: 45px;
+.navbar-left {
+  margin-left: 45px;
 }
-.navbar-right{
-    display: flex;
-    flex-direction: row;
+.navbar-right {
+  display: flex;
+  flex-direction: row;
 }
-.dropdowns{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+.dropdowns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
-.dropdown{
-    position: relative;
-    margin: 10px 0px;
+.dropdown {
+  position: relative;
+  margin: 10px 0px;
 }
-.dropdown label{
-    position: absolute;
-    margin-top: -20px;
-    margin-left: 12px;
-    background: rgb(211, 212, 220);
-    padding: 5px;
-    color: #565050;
+.dropdown label {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 12px;
+  background: rgb(211, 212, 220);
+  padding: 5px;
+  color: #565050;
 }
-    
 
-.dropdown button{
-    border: 1px solid gray;
-    
-
+.dropdown button {
+  border: 1px solid gray;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
-.user{
-    display: flex;
-    flex-direction: row;
-    margin: 0px 15px;
-    align-items: center;
-
+.user {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 15px;
+  align-items: center;
 }
-.user img{
-    background: white;
-    border-radius: 10px;
-    margin-right: 10px;
-    padding: 0px 8px;
-    height: 45px;
+.user img {
+  background: white;
+  border-radius: 18px;
+  margin-right: 10px;
+  padding: 0px 8px;
+  height: 45px;
 }
-.user p{
-    padding-top: 10px;
-    color: red;
-    font-weight: 700;
+.user p {
+  padding-top: 10px;
+  color: red;
+  font-weight: 700;
 }

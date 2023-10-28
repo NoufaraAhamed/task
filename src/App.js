@@ -1,15 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import Mainsection from './components/Mainsection/Mainsection';
-import Navbar from './components/Navbar/Navbar';
-
-
+import Mainsection from "./components/Mainsection/Mainsection";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const [items,setItems]= useState([])
+  const [items, setItems] = useState([]);
 
-  useEffect(()=>{
-    async function getData(){
+  useEffect(() => {
+    async function getData() {
       await fetch(
         "https://mysaleappinventoryapi-7lfpakcp7q-el.a.run.app/api/v1/Item",
         {
@@ -17,29 +15,24 @@ function App() {
             dbName: "tradeapptestdb",
           },
         }
-      ).then(res=>res.json())
-      .then(data=>{
-        console.log(data);
-        if (typeof data === 'object' && !Array.isArray(data)) {
-          data = Object.values(data);
-          
-        }
-        setItems(data)
-      })  
-      
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (typeof data === "object" && !Array.isArray(data)) {
+            data = Object.values(data);
+          }
+          setItems(data);
+        });
     }
     getData();
-    
-
-  },[])
-  console.log(items)
+  }, []);
+  
   return (
     <div className="App">
-      <Navbar/>
-      <Mainsection items={items[0]}/>
-     
+      <Navbar />
+      <Mainsection items={items[0]} />
     </div>
-    
   );
 }
 
