@@ -8,7 +8,8 @@ import filter_icon from "../Assets/icons-filter.png";
 import Table from "../Table/Table";
 
 function Mainsection(props) {
-  const { items } = props;
+ const {items}=props;
+
   return (
     <div className="mainsection">
       <div className="box">
@@ -94,7 +95,8 @@ function Mainsection(props) {
           </div>
         </div>
 
-        <Table items={items} />
+       <Table items={items}/>
+    
       </div>
     </div>
   );

@@ -18,33 +18,22 @@ function Table(props) {
         </tr>
       </thead>
       <tbody>
-        {items.map((items) => {
-          return;
-          <tr>
-            <td>{items.itemName}</td>
-            <td>{items.itemCode}</td>
-            <td>{items.categoryId}</td>
-            <td>{items.landingCost}</td>
-            <td>{items.sellingRate}</td>
-            <td>{items.stock}</td>
+      { items && items.map((item) => (
+         
+          <tr key={item.itemId}>
+            <td>{item.itemName}</td>
+            <td>{item.itemCode}</td>
+            <td>{item.categoryName}</td>
+            <td>{item.landingCost}</td>
+            <td>{item.sellingRate}</td>
+            <td>{item.stock}</td>
             <td>
               <button className="btn btn-primary">edit</button>
               <button className="btn btn-danger ms-3">delete</button>
             </td>
-          </tr>;
-        })}
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>
-            <button className="btn btn-primary">edit</button>
-            <button className="btn btn-danger ms-3">delete</button>
-          </td>
-        </tr>
+          </tr>
+        ))}
+       
       </tbody>
     </table>
   );
