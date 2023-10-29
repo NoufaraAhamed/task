@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Table.css";
+import { ItemContext } from "../../context/ItemContext";
 
 function Table(props) {
-  const { items } = props;
+  const { items } = useContext(ItemContext);
 
   const sendStatus = ()=>{
     const data=true;
@@ -42,9 +43,9 @@ function Table(props) {
             <tr key={item.itemId}>
               <td className="ps-5 head">{item.itemName}</td>
               <td className="head">{item.itemCode ? item.itemCode : '--'}</td>
-              <td className="head">{item.categoryName ? item.categoryName : '--'}</td>
+              <td className="head">{item.categoryId ? item.categoryId : '--'}</td>
               <td className="head">{item.landingCost}</td>
-              <td className="head">{item.sellingRate ? item.sellingRate : '--'}</td>
+              <td className="head">{item.taxIncAmount ? item.taxIncAmount : '--'}</td>
               <td className="head">{item.stock}</td>
               <td>
                 <button className="btn btn-primary" onClick={sendStatus}>Edit</button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Mainsection.css";
 import print_icon from "../Assets/icons-print.png";
 import export_icon from "../Assets/icons-upload.png";
@@ -7,8 +7,8 @@ import plus_icon from "../Assets/icons-plus.png";
 import filter_icon from "../Assets/icons-filter.png";
 import Table from "../Table/Table";
 
-function Mainsection(props) {
-  const { items } = props;
+function Mainsection() {
+  
   const [showMessage, setShowMessage] = useState(false);
 
   const handleButtonClick = () => {
@@ -117,7 +117,7 @@ function Mainsection(props) {
             </button>
           </div>
         </div>
-        <Table items={items} sendStatus={receiveData} />
+        <Table  sendStatus={receiveData} />
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Mainsection from "./components/Mainsection/Mainsection";
 import Navbar from "./components/Navbar/Navbar";
+import { ItemContext } from "./context/ItemContext";
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -28,10 +30,12 @@ function App() {
   }, []);
   
   return (
+    <ItemContext.Provider value={{items:items[0]}}>
     <div className="App">
       <Navbar />
-      <Mainsection items={items[0]} />
+      <Mainsection />
     </div>
+    </ItemContext.Provider>
   );
 }
 
